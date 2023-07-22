@@ -1,0 +1,63 @@
+<section class="property-biding">
+
+<!--     <article>
+        <h3>Intepolação</h3>
+        <p>String sendo renderizada com interpolação: {{ url }}</p>
+        <p>Resultado de 1+1 é: {{ 1+1 }}</p>
+        <p>Resultado de 1+1 é: {{ 1+1+getValor() }}</p>
+        <p>Curso angular e RetornoZAP: {{cursoAngular && getCursosZap() }}</p>
+    </article>
+
+
+    <article>
+        <h3>Property Biding</h3>
+        <img [src]="urlImage">
+
+    </article> -->
+
+
+    <article>
+        <h3>Class e Style Biding</h3>
+        <div>
+            Selecione uma classe
+            
+            <select #classe (change)="0">
+                <option value="alert alert-success">Sucesso</option>
+                <option value="alert alert-info">Info</option>
+                <option value="alert alert-warning">Alerta</option>
+                <option value="alert alert-danger">Erro</option>
+            </select>
+        </div>
+        <br><br>
+
+
+        <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert alert-danger' ? 'block' : 'none' ">
+            Esse texto só aparece em caso de erro
+        </div>
+
+        <div class="alert {{ classe.value}}" role="alert">
+            Texto colorido conforme valor do combobox
+        </div>
+
+
+
+
+          <div class="alert" role="alert"
+          [class.alert-success] = "classe.value == 'alert alert-success'">
+            SUCESSO
+          </div>
+          <div class="alert" role="alert"
+          [class.alert-info] = "classe.value == 'alert alert-info'">
+            INFO
+          </div>
+          <div class="alert" role="alert"
+          [class.alert-warning] = "classe.value == 'alert alert-warning'">
+            WARNING
+          </div>
+          <div class="alert" role="alert"
+          [class.alert-warning] = "classe.value == 'alert alert-danger'">
+            ERROR
+        </div>
+    </article>
+
+</section>
